@@ -1,13 +1,8 @@
-# majabojarska's dotfiles
+# Dotfiles
 
-## Usage
+![](meta/happy_peepo.png "Peepo has cool dotfiles!")
 
-```
-git clone git@github.com:notthebee/dotfiles.git ~/dotfiles
-cd ~/dotfiles
-ansible-playbook run.yml
-```
+## To-do
 
-## Acknowledgements
-
-- Mostly based on [notthebee/dotfiles](https://github.com/notthebee/dotfiles).
+- Automated install
+- Automated scrape (from configs into repo)

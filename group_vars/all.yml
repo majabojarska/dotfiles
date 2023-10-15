@@ -1,9 +1,0 @@
----
-username: "{{ ansible_env.USER }}"
-
-path_dotfiles: "{{ playbook_dir }}/dotfiles"
-
-# Relative to ansible_env.HOME
-backup_targets:
-  - ".zshrc"
-  - ".tmux.conf"
