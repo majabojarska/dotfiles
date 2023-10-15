@@ -26,4 +26,5 @@
     src: "{{ item.path }}"
     dest: "/{{ item.path | relpath(path_dotfiles) }}"
     backup: true
+    mode: "0644"
   loop: "{{ find_result.files }}"
