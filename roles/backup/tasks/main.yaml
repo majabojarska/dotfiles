@@ -1,8 +1,4 @@
 ---
-- name: Determine backup path
-  ansible.builtin.set_fact:
-    path_backup: "{{ path_dotfiles }}/{{ ansible_hostname }}"
-
 - name: Backup dotfile
   ansible.builtin.include_tasks: "backup.yaml"
   loop: "{{ backup_targets }}"
