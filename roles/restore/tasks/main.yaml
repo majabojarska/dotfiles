@@ -1,0 +1,37 @@
+---
+- name: Determine backup path
+  ansible.builtin.set_fact:
+    path_backup: "{{ path_dotfiles }}/{{ ansible_hostname }}"
+
+- name: Find directories in backup
+  ansible.builtin.find:
+    paths: "{{ path_backup }}"
+    recurse: yes
+    file_type: directory
+  register: find_result
+
+- name: Ensure directory structure exists
+  ansible.builtin.file:
+    path: "{{ ansible_env.HOME }}/{{ item.path | relpath(path_backup) }}"
+    state: directory
+    mode: "0755"
+  loop: "{{ find_result.files }}"
+
+- name: Find non-directory files in backup
+  ansible.builtin.find:
+    paths: "{{ path_backup }}"
+    recurse: yes
+    hidden: true
+    file_type: file
+  register: find_result
+
+- debug:
+    msg: "{{ item.path | relpath(path_backup) }}"
+  loop: "{{ find_result.files }}"
+
+- name: Restore files
+  ansible.builtin.copy:
+    src: "{{ item.path }}"
+    dest: "/{{ item.path | relpath(path_backup) }}"
+    backup: true
+  loop: "{{ find_result.files }}"

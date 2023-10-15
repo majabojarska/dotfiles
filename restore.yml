@@ -1,0 +1,7 @@
+#! /usr/bin/env ansible-playbook -c dotfiles/ansible.cfg
+---
+- name: Configure dotfiles
+  hosts: all
+  become: no
+  roles:
+    - role: restore

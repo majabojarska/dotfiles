@@ -1,0 +1,11 @@
+---
+- name: Replicate absolute parent directory structure
+  ansible.builtin.file:
+    path: "{{ path_backup }}/{{ ansible_env.HOME }}/{{ path_src | dirname }}"
+    state: directory
+    mode: "0755"
+
+- name: Copy file
+  ansible.builtin.copy:
+    src: "{{ ansible_env.HOME }}/{{ path_src }}"
+    dest: "{{ path_backup }}/{{ ansible_env.HOME }}/{{ path_src }}"
