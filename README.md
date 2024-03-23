@@ -36,7 +36,7 @@ If any of the configs already exist in their target location, follow this sectio
 > :warning: This will overwrite the already present configs in the target location. Create backups before proceeding.
 
 ```shell
-make force-install
+make install-overwrite
 ```
 
 ### Uninstall

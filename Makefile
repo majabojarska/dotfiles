@@ -7,10 +7,14 @@ all: install
 install:
 	stow $(PACKAGE_DIR) --verbose --target $(TARGET)
 
-.PHONY: force-install
-force-install:
+.PHONY: install-overwrite
+install-overwrite:
 	stow $(PACKAGE_DIR) --verbose --target $(TARGET) --adopt
 	git reset --hard
+
+.PHONY: adopt
+adopt:
+	stow $(PACKAGE_DIR) --verbose --target $(TARGET) --adopt
 
 .PHONY: uninstall
 uninstall:
