@@ -10,12 +10,7 @@ jobs:
     name: Lint
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: read
-      packages: read
-      # To report GitHub Actions status checks
-      statuses: write
-
+    permissions: read-all
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -29,3 +24,4 @@ jobs:
         env:
           # To report GitHub Actions status checks
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FILTER_REGEX_EXCLUDE: LICENSE.md
