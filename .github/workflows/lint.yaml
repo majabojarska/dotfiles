@@ -5,12 +5,13 @@ on: # yamllint disable-line rule:truthy
   push: null
   pull_request: null
 
+permissions: read-all
+
 jobs:
   build:
     name: Lint
     runs-on: ubuntu-latest
 
-    permissions: read-all
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
