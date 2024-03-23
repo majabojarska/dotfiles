@@ -28,14 +28,14 @@
 make install
 ```
 
-### Adopt
+### Force install
 
 If any of the configs already exist in their target location, follow this section.
 
 > :warning: This will overwrite the already present configs in the target location. Create backups before proceeding.
 
 ```shell
-make force-adopt
+make force-install
 ```
 
 ### Uninstall

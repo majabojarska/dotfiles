@@ -7,8 +7,8 @@ all: install
 install:
 	stow $(PACKAGE_DIR) --verbose --target $(TARGET)
 
-.PHONY: force-adopt
-force-adopt:
+.PHONY: force-install
+force-install:
 	stow $(PACKAGE_DIR) --verbose --target $(TARGET) --adopt
 	git reset --hard
 
