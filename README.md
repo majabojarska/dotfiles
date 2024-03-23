@@ -22,32 +22,24 @@
 
 ## Usage
 
-### Adoption
+### Install
+
+```shell
+make install
+```
+
+### Adopt
 
 If any of the configs already exist in their target location, follow this section.
 
 > :warning: This will overwrite the already present configs in the target location. Create backups before proceeding.
 
-1. Setup the symlinks between the source and target.
+```shell
+make force-adopt
+```
 
-    ```shell
-    stow dotfiles --target $HOME --adopt
-    ```
-
-1. Discard the state loaded from target.
-
-    ```shell
-    git reset --hard
-    ```
-
-1. Install dotfiles from source to target.
-
-    ```shell
-    stow dotfiles --target $HOME
-    ```
-
-### Synchronization
+### Uninstall
 
 ```shell
-stow dotfiles --target $HOME
+make uninstall
 ```

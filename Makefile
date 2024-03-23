@@ -1,16 +1,17 @@
 PACKAGE_DIR = dotfiles
 TARGET = ${HOME}
 
-all: stow
+all: install
 
-.PHONY: stow
-stow: 
+.PHONY: install
+install:
 	stow $(PACKAGE_DIR) --verbose --target $(TARGET)
 
-.PHONY: adopt
-adopt:
+.PHONY: force-adopt
+force-adopt:
 	stow $(PACKAGE_DIR) --verbose --target $(TARGET) --adopt
+	git reset --hard
 
-.PHONY: unstow
-unstow:
+.PHONY: uninstall
+uninstall:
 	stow $(PACKAGE_DIR) --verbose --target $(TARGET) --delete
