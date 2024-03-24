@@ -48,14 +48,15 @@ alias kl='kubectl logs -f'
 alias kk='k9s --write'
 alias kr='k9s --readonly'
 
-
 # Misc tools
 alias cat='bat'
+alias c='bat'
 alias la='tree'
 alias l='eza -l --icons --git -a'
 alias lt='eza --tree --level=2 --long --icons --git'
 alias v='nvim'
 alias cl='clear'
+alias t='tmux'
 
 # Git
 alias gs='git status'
