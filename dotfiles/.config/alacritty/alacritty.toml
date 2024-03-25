@@ -7,7 +7,7 @@ import = [
 live_config_reload = true
 
 [env]
-TERM = "screen-256color"
+TERM = "xterm-256color"
 
 [window]
 decorations = "None"
