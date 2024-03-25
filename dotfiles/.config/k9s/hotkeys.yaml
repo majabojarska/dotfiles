@@ -1,0 +1,30 @@
+hotKeys:
+  pods:
+    shortCut:    Shift-1
+    description: View Pods
+    command:     pods
+  deployments:
+    shortCut:    Shift-2
+    description: View Deployments
+    command:     dep
+  statefulsets:
+    shortCut:    Shift-3
+    description: View StatefulSets
+    command:     sts
+  configmaps:
+    shortCut:    Shift-4
+    description: View ConfigMaps
+    command:     cm
+  secrets:
+    shortCut:    Shift-5
+    description: View Secrets
+    command:     secrets
+  namespaces:
+    shortCut:    Shift-N
+    description: View Namespaces
+    command:     ns
+    override: true
+  kube-system:
+    shortCut:    Shift-K
+    description: View kube-system ns
+    command:     "$RESOURCE_NAME kube-system"
