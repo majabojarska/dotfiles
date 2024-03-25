@@ -37,9 +37,6 @@ bindkey jj vi-cmd-mode
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
 
-# Golang
-export GOPATH='/Users/omerhamerman/go'
-
 # K8s
 alias k='kubectl'
 alias kgp='kubectl get pod'
