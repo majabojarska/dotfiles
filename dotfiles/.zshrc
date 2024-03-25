@@ -81,12 +81,18 @@ path+=("${HOME}/.npm-global/bin")
 # Add Ruby gems to path
 path+=("${HOME}/.gem/ruby/2.7.0/bin")
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# For workstation-specific stuff and local secrets
+for file in $(ls ~/.zshrc_ext*); do
+  source "${file}"
+done
 
 eval $(thefuck --alias)
 eval $(thefuck --alias f)
+
 eval "$(zoxide init zsh)"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 
