@@ -15,7 +15,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 HYPHEN_INSENSITIVE="true"
 
-plugins=(git python docker kubectl kube-ps1 git fzf)
+plugins=(git aliases github cp 1password golang python virtualenv debian encode64 extract tmux github docker zoxide kubectl kube-ps1 terraform fzf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -91,6 +91,13 @@ eval "$(zoxide init zsh)"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --border --preview 'echo {}'"
+export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
+export FZF_CTRL_R_OPTS="
+  --preview 'echo {}' --preview-window up:4:hidden:wrap
+  --bind 'ctrl-/:toggle-preview'
+  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'"
+export FZF_CTRL_T_OPTS="
+  --preview 'bat -n --color=always {}'"
 
 source /home/mabojars/Projects/alacritty/extra/completions/alacritty.bash
