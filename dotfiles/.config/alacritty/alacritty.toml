@@ -1,4 +1,8 @@
-import = ["~/.config/alacritty/themes/gruvbox_dark.toml"]
+import = [
+    "~/.config/alacritty/themes/gruvbox_dark.toml",
+    # For non-public workstation-specific stuff
+    "~/.config/alacritty/workstation-specific.toml",
+]
 
 live_config_reload = true
 
