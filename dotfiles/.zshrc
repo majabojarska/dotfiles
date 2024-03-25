@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -44,10 +44,10 @@ export GOPATH='/Users/omerhamerman/go'
 alias k='kubectl'
 alias kgp='kubectl get pod'
 alias kl='kubectl logs -f'
+alias po="kubectl get pods"
 
 alias kk='k9s --write'
 alias kr='k9s --readonly'
-
 # Misc tools
 alias cat='bat'
 alias c='bat'
@@ -71,12 +71,23 @@ alias gba='git branch -a'
 alias gr='git remote'
 alias gre='git reset'
 
-eval $(thefuck --alias)
 
-export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+# Add Go bin to PATH
+path+=("$(go env GOPATH)/bin")
 
-eval "$(zoxide init zsh)"
+# Add npm global dir to path
+path+=("${HOME}/.npm-global/bin")
+
+# Add Ruby gems to path
+path+=("${HOME}/.gem/ruby/2.7.0/bin")
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+eval $(thefuck --alias)
+eval $(thefuck --alias f)
+eval "$(zoxide init zsh)"
+
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+
+source /home/mabojars/Projects/alacritty/extra/completions/alacritty.bash
