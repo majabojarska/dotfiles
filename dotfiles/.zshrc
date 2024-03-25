@@ -100,4 +100,4 @@ export FZF_CTRL_R_OPTS="
 export FZF_CTRL_T_OPTS="
   --preview 'bat -n --color=always {}'"
 
-source /home/mabojars/Projects/alacritty/extra/completions/alacritty.bash
+# source /home/mabojars/Projects/alacritty/extra/completions/alacritty.bash
