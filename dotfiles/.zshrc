@@ -101,3 +101,5 @@ export FZF_CTRL_T_OPTS="
   --preview 'bat -n --color=always {}'"
 
 # source /home/mabojars/Projects/alacritty/extra/completions/alacritty.bash
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
