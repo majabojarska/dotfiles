@@ -8,6 +8,18 @@ fi
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
 
+# FZF
+export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --border --preview 'echo {}'"
+export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
+export FZF_CTRL_R_OPTS="
+  --preview 'echo {}' --preview-window up:4:hidden:wrap
+  --bind 'ctrl-/:toggle-preview'
+  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'"
+export FZF_CTRL_T_OPTS="
+  --preview 'bat -n --color=always {}'"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -91,15 +103,4 @@ eval "$(zoxide init zsh)"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --border --preview 'echo {}'"
-export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
-export FZF_CTRL_R_OPTS="
-  --preview 'echo {}' --preview-window up:4:hidden:wrap
-  --bind 'ctrl-/:toggle-preview'
-  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'"
-export FZF_CTRL_T_OPTS="
-  --preview 'bat -n --color=always {}'"
-
 # source /home/mabojars/Projects/alacritty/extra/completions/alacritty.bash
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
