@@ -91,7 +91,7 @@ path+=("${HOME}/.npm-global/bin")
 path+=("${HOME}/.gem/ruby/2.7.0/bin")
 
 # For workstation-specific stuff and local secrets
-for file in $(find . -maxdepth 1 -name '.zshrc_ext*' -print -quit); do
+for file in $(find ~/ -maxdepth 1 -name '.zshrc_ext*' -print -quit); do
   source "${file}"
 done
 
