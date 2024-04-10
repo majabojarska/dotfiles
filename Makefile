@@ -16,6 +16,10 @@ install-overwrite:
 adopt:
 	stow $(PACKAGE_DIR) --verbose --target $(TARGET) --adopt
 
+.PHONY: adopt
+adopt-simulate:
+	stow $(PACKAGE_DIR) --verbose --target $(TARGET) --adopt --simulate
+
 .PHONY: uninstall
 uninstall:
 	stow $(PACKAGE_DIR) --verbose --target $(TARGET) --delete
