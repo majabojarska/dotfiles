@@ -47,6 +47,9 @@ alias po="kubectl get pods"
 
 alias kk='k9s --write'
 alias kr='k9s --readonly'
+alias kkn='k9s --command namespaces'
+alias krn='k9s --readonly --command namespaces'
+
 # Misc tools
 alias cat='bat'
 alias c='bat'
@@ -56,6 +59,7 @@ alias lt='eza --tree --level=2 --long --icons --git'
 alias v='nvim'
 alias cl='clear'
 alias t='tmux'
+alias sleepv='yes | pv -SpeL1 -s' # Verbose sleep with progress bar. Requires pv.
 
 # Git
 alias gs='git status'
