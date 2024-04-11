@@ -71,6 +71,7 @@ alias gba='git branch -a'
 alias gr='git remote'
 alias gre='git reset'
 
+alias lg='lazygit'
 
 # Add Go bin to PATH
 path+=("$(go env GOPATH)/bin")
