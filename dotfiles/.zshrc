@@ -62,7 +62,6 @@ alias cl='clear'
 alias t='tmux'
 alias sleepv='yes | pv -SpeL1 -s' # Verbose sleep with progress bar. Requires pv.
 alias proj='cd ~/Projects/'
-alias lke='cd ~/Projects/lke/'
 
 # Git
 alias gs='git status'
