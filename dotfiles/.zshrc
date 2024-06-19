@@ -57,7 +57,6 @@ alias la='tree'
 alias l='eza -l --icons --git -a'
 alias lt='eza --tree --level=2 --long --icons --git'
 alias lv='lvim'
-alias vim='lvim'
 alias cl='clear'
 alias t='tmux'
 alias sleepv='yes | pv -SpeL1 -s' # Verbose sleep with progress bar. Requires pv.
