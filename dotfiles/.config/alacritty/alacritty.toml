@@ -21,19 +21,19 @@ opacity = 1.0
 size = 14.0
 
 [font.bold]
-family = "Fira Code"
+family = "FiraCode Nerd Font Mono"
 style = "Heavy"
 
 [font.bold_italic]
-family = "Fira Code"
+family = "FiraCode Nerd Font Mono"
 style = "Heavy Italic"
 
 [font.italic]
-family = "Fira Code"
+family = "FiraCode Nerd Font Mono"
 style = "Medium Italic"
 
 [font.normal]
-family = "Fira Code"
+family = "FiraCode Nerd Font Mono"
 style = "Medium"
 
 [selection]
