@@ -28,9 +28,9 @@ export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nvim'
+  export EDITOR='vim'
 else
-  export EDITOR='lvim'
+  export EDITOR='vim'
 fi
 
 # VI mode
@@ -111,3 +111,7 @@ export FZF_CTRL_T_OPTS="
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # source /home/mabojars/Projects/alacritty/extra/completions/alacritty.bash
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
