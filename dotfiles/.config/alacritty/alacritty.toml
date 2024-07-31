@@ -1,5 +1,5 @@
 import = [
-     "~/.config/alacritty/themes/gruvbox_dark.toml",
+    "~/.config/alacritty/themes/gruvbox_dark.toml",
     # For non-public workstation-specific stuff
     "~/.config/alacritty/workstation-specific.toml",
 ]
