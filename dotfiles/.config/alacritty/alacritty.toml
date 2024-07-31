@@ -1,5 +1,5 @@
 import = [
-    "~/.config/alacritty/themes/gruvbox_dark.toml",
+     "~/.config/alacritty/themes/gruvbox_dark.toml",
     # For non-public workstation-specific stuff
     "~/.config/alacritty/workstation-specific.toml",
 ]
@@ -21,19 +21,19 @@ opacity = 1.0
 size = 14.0
 
 [font.bold]
-family = "FiraCode Nerd Font Mono"
+family = "Fira Code"
 style = "Heavy"
 
 [font.bold_italic]
-family = "FiraCode Nerd Font Mono"
+family = "Fira Code"
 style = "Heavy Italic"
 
 [font.italic]
-family = "FiraCode Nerd Font Mono"
+family = "Fira Code"
 style = "Medium Italic"
 
 [font.normal]
-family = "FiraCode Nerd Font Mono"
+family = "Fira Code"
 style = "Medium"
 
 [selection]
