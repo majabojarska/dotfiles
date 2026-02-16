@@ -44,3 +44,8 @@ make install-overwrite
 ```shell
 make uninstall
 ```
+
+## Other
+
+- [kitty.conf](https://github.com/majabojarska/kitty.conf)
+- [astronvim_config](https://github.com/majabojarska/astronvim_config)
